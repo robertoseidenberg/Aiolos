@@ -11,7 +11,7 @@ import Foundation
 /// Used to create a layout guide that pins to the top of the keyboard
 final class KeyboardLayoutGuide {
   
-    var isActive: Bool = true
+    var isEnabled: Bool = true
 
     private let notificationCenter: NotificationCenter
     private let bottomConstraint: NSLayoutConstraint
@@ -50,7 +50,7 @@ private extension KeyboardLayoutGuide {
 
     @objc
     func keyboardWillChangeFrame(_ notification: Notification) {
-        guard isActive == true else { return }
+        guard isEnabled == true else { return }
         guard let owningView = self.topGuide.owningView else { return }
         guard let window = owningView.window else { return }
         guard let keyboardInfo = KeyboardInfo(userInfo: notification.userInfo) else { return }
@@ -81,7 +81,7 @@ private extension KeyboardLayoutGuide {
 
     @objc
     func keyboardWillHide(_ notification: Notification) {
-        guard isActive == true else { return }
+        guard isEnabled == true else { return }
         self.bottomConstraint.constant = 0.0
         self.topGuide.owningView?.layoutIfNeeded()
     }
