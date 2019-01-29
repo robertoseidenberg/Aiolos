@@ -14,7 +14,7 @@ final class PanelConstraints {
 
     private unowned let panel: Panel
     private var isResizing: Bool = false
-    private lazy var keyboardLayoutGuide: KeyboardLayoutGuide = self.makeKeyboardLayoutGuide()
+    private(set) lazy var keyboardLayoutGuide: KeyboardLayoutGuide = self.makeKeyboardLayoutGuide(panel.configuration.keyboardAvoidanceEnabled)
     private var topConstraint: NSLayoutConstraint?
     private var topConstraintMargin: CGFloat = 0.0
     private var widthConstraint: NSLayoutConstraint?
@@ -151,7 +151,7 @@ internal extension PanelConstraints {
 
 private extension PanelConstraints {
 
-    func makeKeyboardLayoutGuide() -> KeyboardLayoutGuide {
+    func makeKeyboardLayoutGuide(_ isEnabled: Bool) -> KeyboardLayoutGuide {
         guard let parentView = self.panel.parent?.view else { fatalError("Must have a parent by now") }
 
         return KeyboardLayoutGuide(parentView: parentView)
