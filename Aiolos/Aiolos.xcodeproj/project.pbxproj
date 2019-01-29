@@ -82,7 +82,7 @@
 		9BC6A9401F3A03D100CE9499 /* PanelTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelTransition.swift; sourceTree = "<group>"; };
 		9BEB70261F16582F00EDB0C1 /* PanelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelContentViewController.swift; sourceTree = "<group>"; };
 		9BEB70281F17715700EDB0C1 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
-		9BEB702A1F179D2A00EDB0C1 /* PanelConstraints.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = PanelConstraints.swift; sourceTree = "<group>"; tabWidth = 4; };
+		9BEB702A1F179D2A00EDB0C1 /* PanelConstraints.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = PanelConstraints.swift; sourceTree = "<group>"; };
 		9BEB702C1F17A2CF00EDB0C1 /* PanelAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelAnimator.swift; sourceTree = "<group>"; };
 		9BEB702E1F18F9C600EDB0C1 /* PanelGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelGestures.swift; sourceTree = "<group>"; };
 		9BEB70301F19154300EDB0C1 /* KeyboardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuide.swift; sourceTree = "<group>"; };
