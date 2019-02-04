@@ -88,7 +88,8 @@ public extension Panel {
         super.viewDidLoad()
 
         self.gestures.install()
-        self.containerView?.insertSubview(self.resizeHandle, at: 0)
+        // self.containerView?.insertSubview(self.resizeHandle, at: 0)
+      self.containerView?.addSubview(self.resizeHandle)
         self.containerView?.addSubview(self.separatorView)
     }
 
@@ -97,7 +98,8 @@ public extension Panel {
 
         let (resizeFrame, panelFrame) = self.view.bounds.divided(atDistance: ResizeHandle.Constants.height, from: .minYEdge)
         self.resizeHandle.frame = resizeFrame
-        self.panelView.frame = panelFrame
+        self.panelView.frame = view.bounds
+
 
         let lineWidth = 1.0 / UIScreen.main.scale
         var dividerFrame = panelFrame.insetBy(dx: lineWidth, dy: 0.0)
