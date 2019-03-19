@@ -132,7 +132,7 @@ public extension Panel {
 
 public extension Panel {
 
-    func add(to parent: UIViewController, transition: Transition = .none) {
+  func add(to parent: UIViewController, transition: Transition = .none, completion: @escaping () -> Void = {}) {
         guard self.parent !== parent || self.animator.isTransitioningFromParent else { return }
 
         if self.animator.isTransitioningFromParent {
@@ -150,6 +150,7 @@ public extension Panel {
             contentViewController?.endAppearanceTransition()
             self.updateAccessibility(for: self.configuration.mode)
             self.fixNavigationBarLayoutMargins()
+            completion()
         }
     }
 
