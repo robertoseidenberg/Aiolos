@@ -12,7 +12,7 @@ import Foundation
 /// Allows to configure the appearance of the floating panel
 public extension Panel {
 
-    public struct Configuration {
+    struct Configuration {
 
         public enum Edge: Int {
             case top

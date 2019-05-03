@@ -239,7 +239,7 @@
 					};
 					9B2252561F1508FD006DE55D = {
 						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
